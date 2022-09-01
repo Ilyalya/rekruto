@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import random
 
 
 def index(request):
-    name = request.GET.get("name")
-    message = request.GET.get("message")
-    return HttpResponse(f"<h2>Hello {name}! {message}!</h2>")
+    rnd = random.randint(1000, 9999)
+    return HttpResponse(f"<h2> {rnd} </h2>")
